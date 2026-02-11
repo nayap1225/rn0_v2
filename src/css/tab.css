@@ -1,0 +1,58 @@
+/**
+* Tab CSS
+**/
+
+.tab {
+  .tab-link {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    &.tab-link--lg {
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+      gap: 10px 20px;
+      li {
+        text-align: center;
+      }
+      button {
+        padding: 5px 10px;
+        font-size: 24px;
+        font-weight: 800;
+        color: rgb(0, 71, 171, 0.2);
+        border-bottom: 3px solid transparent;
+        white-space: nowrap;
+        .active & {
+          border-bottom-color: rgb(0, 71, 171, 1);
+          color: rgb(0, 71, 171, 1);
+        }
+        @media (min-width: 800px) {
+          font-size: 30px;
+        }
+        @media (min-width: 1280px) {
+          font-size: 34px;
+        }
+      }
+    }
+    &.tab-link--base {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      button {
+        width: 100%;
+        background: #f3f5f9;
+        padding: 15px 10px;
+        font-size: 16px;
+        font-weight: 600;
+        color: rgb(0, 71, 171);
+        white-space: nowrap;
+        .active & {
+          background: rgb(0, 71, 171);
+          color: #fff;
+        }
+        @media (min-width: 800px) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
