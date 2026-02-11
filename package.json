@@ -1,0 +1,21 @@
+{
+  "name": "rn0_v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/css/globals.css -o ./dist/css/globals.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/css/globals.css -o ./dist/css/globals.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  },
+  "dependencies": {
+    "swiper": "^12.1.0"
+  }
+}

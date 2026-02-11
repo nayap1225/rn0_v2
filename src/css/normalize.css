@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Pretendard";
+  src:
+    url("/public/fonts/Pretendard-Regular.woff2") format("woff2"),
+    url("/fonts/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src:
+    url("/public/fonts/Pretendard-Medium.woff2") format("woff2"),
+    url("/public/fonts/Pretendard-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src:
+    url("/public/fonts/Pretendard-SemiBold.woff2") format("woff2"),
+    url("/public/fonts/Pretendard-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src:
+    url("/public/fonts/Pretendard-Bold.woff2") format("woff2"),
+    url("/public/fonts/Pretendard-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src:
+    url("/public/fonts/Pretendard-ExtraBold.woff2") format("woff2"),
+    url("/public/fonts/Pretendard-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src:
+    url("/public/fonts/Pretendard-Black.woff2") format("woff2"),
+    url("/public/fonts/Pretendard-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #000;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    line-height: 1;
+    font-family: Pretendard, "Malgun Gothic", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+  }
+
+  ol,
+  ul,
+  li {
+    word-break: break-word;
+  }
+
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    word-break: keep-all;
+    th,
+    td {
+      padding: 0;
+    }
+  }
+  a,
+  button {
+    text-decoration: none;
+    cursor: pointer;
+    &:disabled {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+
+  ::placeholder {
+    color: #787878;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  textarea {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 20px;
+    height: 150px;
+    resize: none;
+  }
+}

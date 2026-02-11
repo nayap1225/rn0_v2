@@ -1,0 +1,65 @@
+@import "./lib/swiper-bundle.min.css" layer(components);
+@layer utilities {
+  .swiper-pagination {
+    display: flex;
+    gap: 5px;
+    width: auto;
+    left: 20px;
+    bottom: 54px;
+    top: auto;
+    @media (min-width: 800px) {
+      left: 40px;
+    }
+    @media (min-width: 1280px) {
+      left: calc(50% - 600px);
+    }
+  }
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 15px;
+    margin: 0;
+    border-radius: 0;
+    background: transparent;
+    border: 1px solid #fff;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background: #fff;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    top: calc(50% - 70px);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px;
+    svg {
+      display: none;
+    }
+    @media (min-width: 800px) {
+      top: calc(50% - 25px);
+    }
+  }
+  .swiper-button-prev {
+    left: 10px;
+    background-image: url(/public/images/arrow-prev.svg);
+    @media (min-width: 800px) {
+      left: 30px;
+    }
+    @media (min-width: 1280px) {
+      left: calc(50% - 620px);
+    }
+  }
+  .swiper-button-next {
+    right: 10px;
+    background-image: url(/public/images/arrow-next.svg);
+    @media (min-width: 800px) {
+      right: 30px;
+    }
+    @media (min-width: 1280px) {
+      right: calc(50% - 620px);
+    }
+  }
+}

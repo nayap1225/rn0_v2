@@ -1,0 +1,9 @@
+/**
+ * Layout styles
+ */
+.wrap {
+  @apply relative flex flex-col min-h-dvh;
+}
+.container-wrap {
+  @apply flex-1 flex flex-col;
+}
