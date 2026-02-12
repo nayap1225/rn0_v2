@@ -23,6 +23,9 @@
 @import "./normalize.css";
 @import "./layout.css";
 @import "./tab.css";
+@import "./button.css";
+@import "./accordion.css";
+@import "./modal.css";
 
 @layer theme, base, components, utilities;
 

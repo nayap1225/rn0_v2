@@ -1,0 +1,69 @@
+/**
+* Modal CSS
+**/
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  visibility: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+  &.is-open {
+    opacity: 1;
+    visibility: 1;
+    z-index: 100;
+  }
+  .modal-panel {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 90%;
+    max-height: 90dvh;
+    max-width: 620px;
+    background: #fff;
+    opacity: 0;
+    visibility: 0;
+    transition: all 0.3s ease;
+    &.is-open {
+      opacity: 1;
+      visibility: 1;
+    }
+  }
+  .modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #d4d4d4;
+    .modal-title {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+  .modal-body {
+    flex: 1;
+    overflow: auto;
+    padding: 20px;
+  }
+  .modal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    > * {
+      flex: 0 1 200px;
+    }
+  }
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .modal-dim {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}

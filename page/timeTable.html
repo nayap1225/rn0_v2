@@ -80,50 +80,50 @@
       </aside>
 
       <!-- S :: container -->
-      <main class="container-wrap">
-        <section class="mt-15">
+      <main class="container-wrap pt-8 py-12 tb:py-16 dt:py-20">
+        <section>
           <div class="container-inner">
             <!-- title 영역 -->
             <div class="flex flex-col gap-4 mb-6 tb:flex-row tb:justify-between tb:items-center tb:mb-8">
               <h2 class="text-3xl/9 font-medium">목동 시대 인재 시간표</h2>
               <div class="flex gap-2 items-center">
-                <button type="button" class="flex-none px-5 py-2 border border-gray-d4 rounded-sm">문자 수신 DB 등록</button>
+                <button type="button" class="btn btn-white btn-square">문자 수신 DB 등록</button>
               </div>
             </div>
             <!-- // title 영역 -->
 
             <!-- 박스영역 -->
             <div class="p-8 bg-gray-f5 rounded-sm">
-              <dl class="flex flex-col tb:flex-row gap-4">
-                <div class="flex flex-auto gap-2">
-                  <dt class="font-bold flex-none">전화문의</dt>
-                  <dd>
-                    <p>
-                      <em>고3/2/1</em>
-                      <span>02-1111-1111</span>
+              <dl class="flex flex-col tb:flex-row gap-8">
+                <div class="flex flex-col flex-auto gap-4 text-base dt:flex-row dt:flex-auto">
+                  <dt class="font-bold flex-none dt:w-28">• 전화문의</dt>
+                  <dd class="px-3">
+                    <p class="flex gap-2">
+                      <em class="not-italic flex-none w-24 font-medium">고3/2/1</em>
+                      <span class="text-gray-333">02-1111-1111</span>
                     </p>
-                    <p>
-                      <em>초중등</em>
+                    <p class="flex gap-2">
+                      <em class="not-italic flex-none w-24 font-medium">초중등</em>
                       <span>02-1111-1111</span>
                     </p>
                   </dd>
                 </div>
-                <div class="flex-auto">
-                  <dt>
-                    예약/상담(문자전용)
-                    <small>* 학부모전화/학생/학교/강좌명</small>
+                <div class="flex flex-col flex-auto gap-4 text-base dt:flex-row dt:flex-auto">
+                  <dt class="font-bold flex-none dt:w-52">
+                    • 예약/상담(문자전용)
+                    <small class="inline-block dt:block ml-2 font-normal text-sm text-gray-666">- 학부모전화/학생/학교/강좌명</small>
                   </dt>
-                  <dd>
-                    <p>
-                      <em>고3</em>
+                  <dd class="px-3">
+                    <p class="flex gap-2">
+                      <em class="not-italic flex-none w-24 font-medium">고3</em>
                       <span>02-1111-1111</span>
                     </p>
-                    <p>
-                      <em>고2/1</em>
+                    <p class="flex gap-2">
+                      <em class="not-italic flex-none w-24 font-medium">고2/1</em>
                       <span>02-1111-1111</span>
                     </p>
-                    <p>
-                      <em>초중등</em>
+                    <p class="flex gap-2">
+                      <em class="not-italic flex-none w-24 font-medium">초중등</em>
                       <span>02-1111-1111</span>
                     </p>
                   </dd>
@@ -131,29 +131,134 @@
               </dl>
             </div>
             <!-- // 박스영역 -->
+          </div>
+        </section>
 
+        <section class="mt-10 tb:mt-15">
+          <div class="container-inner">
             <!-- tab -->
-            <div class="tab">
+            <div class="tab-wrap">
               <ul class="tab-link tab-link--lg">
-                <li class="active"><button type="button">2026 중등</button></li>
-                <li><button type="button">2026 고1</button></li>
-                <li><button type="button">2026 고2</button></li>
-                <li><button type="button">2026 고3</button></li>
+                <li><button type="button" class="tab is-active">2026 중등</button></li>
+                <li><button type="button" class="tab">2026 고1</button></li>
+                <li><button type="button" class="tab">2026 고2</button></li>
+                <li><button type="button" class="tab">2026 고3</button></li>
               </ul>
 
-              <div class="tab-container">
+              <div class="tab-container mt-6 tb:mt-10">
                 <div class="tab-content">
-                  <div class="tab">
+                  <div class="tab-wrap">
                     <ul class="tab-link tab-link--base">
-                      <li class="active"><button type="button">전체</button></li>
-                      <li><button type="button">과학</button></li>
-                      <li><button type="button">수학</button></li>
-                      <li><button type="button">국어</button></li>
-                      <li><button type="button">영어</button></li>
-                      <li><button type="button">사회 한국사</button></li>
+                      <li><button type="button" class="tab is-active">전체</button></li>
+                      <li><button type="button" class="tab">과학</button></li>
+                      <li><button type="button" class="tab">수학</button></li>
+                      <li><button type="button" class="tab">국어</button></li>
+                      <li><button type="button" class="tab">영어</button></li>
+                      <li><button type="button" class="tab">사회 한국사</button></li>
                     </ul>
                     <div class="tab-container">
-                      <div class="tab-content"></div>
+                      <!-- tab inner -->
+                      <div class="tab-content mt-10">
+                        <!-- table 상단 -->
+                        <div class="flex flex-col gap-2 tb:flex-row tb:justify-between tb:items-end">
+                          <button class="btn flex-none" type="button">
+                            <i class="block w-4 h-4 mask-[url('/public/images/book-text.svg')] mask-no-repeat mask-center mask-cover bg-navy"></i>
+                            전체 시간표 보기
+                          </button>
+
+                          <div class="flex px-3 py-2 bg-light-navy border border-navy rounded-4xl w-full tb:w-90">
+                            <input type="text" placeholder="강좌를 검색해 주세요." class="w-full flex-1 text-base px-2 outline-0" />
+                            <button class="flex-none">
+                              <span class="sr-only">검색</span>
+                              <i class="block w-6 h-6 mask-[url('/public/images/search.svg')] mask-no-repeat mask-center mask-cover bg-navy"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <!-- // table 상단 -->
+
+                        <!-- table -->
+                        <div class="mt-6">
+                          <div class="px-3 py-3 border-t-3 border-navy bg-light-navy tb:px-4 tb:py-4">
+                            <h3 class="text-xl text-navy tb:text-2xl">잠실 2026 중등</h3>
+                          </div>
+                          <div class="grid">
+                            <div class="accordion group">
+                              <div class="accordion-head border-b border-gray-d4">
+                                <div class="flex px-2 py-3 gap-4 tb:p-4">
+                                  <div class="flex flex-col flex-1 gap-2.5 font-semibold tb:flex-row tb:gap-4 tb:items-center text-base">
+                                    <span class="tb:w-22 flex-none">김정훈</span>
+                                    <span class="flex-1">중등과학2-1</span>
+                                    <span class="tb:w-52 flex-none font-bold text-lg">토 AM 10:00 ~ 13:00</span>
+                                    <span class="tb:w-36 flex-none">1월3일 (토) 개강</span>
+                                  </div>
+                                  <div class="flex flex-col gap-1 flex-none dt:flex-row dt:gap-2">
+                                    <button type="button" class="btn btn-navy btn-sm" data-modal-open="req-modal">수강신청</button>
+                                    <button type="button" class="accordion-controller btn btn-navy btn-sm">
+                                      상세열기
+                                      <i class="block w-3 h-3 mask-[url('/public/images/chevron-down.svg')] mask-no-repeat mask-center mask-cover bg-white transition duration-300 group-[.is-open]:rotate-180"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-body border-gray-d4">
+                                <div class="accordion-content border-b border-gray-d4">
+                                  <img src="/public/images/temp/bg_visual.png" alt="" />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion group">
+                              <div class="accordion-head border-b border-gray-d4">
+                                <div class="flex px-2 py-3 gap-4 tb:p-4">
+                                  <div class="flex flex-col flex-1 gap-2.5 font-semibold tb:flex-row tb:gap-4 tb:items-center text-base">
+                                    <span class="tb:w-22 flex-none">김정훈</span>
+                                    <span class="flex-1">중등과학2-1</span>
+                                    <span class="tb:w-52 flex-none font-bold text-lg">토 AM 10:00 ~ 13:00</span>
+                                    <span class="tb:w-36 flex-none">1월3일 (토) 개강</span>
+                                  </div>
+                                  <div class="flex flex-col gap-1 flex-none dt:flex-row dt:gap-2">
+                                    <button type="button" class="btn btn-navy btn-sm" data-modal-open="req-modal">수강신청</button>
+                                    <button type="button" class="accordion-controller btn btn-navy btn-sm">
+                                      상세열기
+                                      <i class="block w-3 h-3 mask-[url('/public/images/chevron-down.svg')] mask-no-repeat mask-center mask-cover bg-white transition duration-300 group-[.is-open]:rotate-180"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-body border-gray-d4">
+                                <div class="accordion-content border-b border-gray-d4">
+                                  <img src="/public/images/temp/bg_visual.png" alt="" />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion group">
+                              <div class="accordion-head border-b border-gray-d4">
+                                <div class="flex px-2 py-3 gap-4 tb:p-4">
+                                  <div class="flex flex-col flex-1 gap-2.5 font-semibold tb:flex-row tb:gap-4 tb:items-center text-base">
+                                    <span class="tb:w-22 flex-none">김정훈</span>
+                                    <span class="flex-1">중등과학2-1</span>
+                                    <span class="tb:w-52 flex-none font-bold text-lg">토 AM 10:00 ~ 13:00</span>
+                                    <span class="tb:w-36 flex-none">1월3일 (토) 개강</span>
+                                  </div>
+                                  <div class="flex flex-col gap-1 flex-none dt:flex-row dt:gap-2">
+                                    <button type="button" class="btn btn-navy btn-sm" data-modal-open="req-modal">수강신청</button>
+                                    <button type="button" class="accordion-controller btn btn-navy btn-sm">
+                                      상세열기
+                                      <i class="block w-3 h-3 mask-[url('/public/images/chevron-down.svg')] mask-no-repeat mask-center mask-cover bg-white transition duration-300 group-[.is-open]:rotate-180"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-body border-gray-d4">
+                                <div class="accordion-content border-b border-gray-d4">
+                                  <img src="/public/images/temp/bg_visual.png" alt="" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- // table -->
+                      </div>
+                      <!-- // tab inner -->
                       <div class="tab-content"></div>
                       <div class="tab-content"></div>
                       <div class="tab-content"></div>
@@ -250,6 +355,80 @@
         </div>
       </footer>
       <!-- E :: footer -->
+
+      <div class="modal">
+        <div class="modal-dim" data-modal-close></div>
+        <div class="modal-panel" data-modal="req-modal">
+          <div class="modal-header">
+            <h2 class="modal-title">수강 예약</h2>
+          </div>
+
+          <div class="modal-body">
+            <p class="font-semibold text-lg mb-4">
+              강의 시간
+              <em class="not-italic text-red-500 font-bold">목 P6:00-9:00</em>
+              개강일
+              <em class="not-italic text-red-500 font-bold">1/1</em>
+              <strong class="block font-semibold mb-1">문학 문법 프리미엄 개념 문풀 특강</strong>
+              <small class="block text-gray-ac">국어/권미나</small>
+            </p>
+
+            <div class="flex flex-col gap-5">
+              <div>
+                <input type="text" placeholder="학생 이름" class="w-full h-12 px-3 border border-gray-d4 text-base rounded-sm outline-none bg-white" />
+              </div>
+              <div>
+                <input type="text" placeholder="학교" class="w-full h-12 px-3 border border-gray-d4 text-base rounded-sm outline-none bg-white" />
+              </div>
+              <div>
+                <select name="" id="" class="w-full h-12 px-3 pr-10 border border-gray-d4 text-base rounded-sm outline-none appearance-none bg-white bg-[url(/public/images/chevron-down.svg)] bg-no-repeat bg-position-[right_10px_center] bg-size-[20px]">
+                  <option value="">계열 선택</option>
+                  <option value="">선택1</option>
+                  <option value="">선택2</option>
+                </select>
+              </div>
+              <div>
+                <select name="" id="" class="w-full h-12 px-3 pr-10 border border-gray-d4 text-base rounded-sm outline-none appearance-none bg-white bg-[url(/public/images/chevron-down.svg)] bg-no-repeat bg-position-[right_10px_center] bg-size-[20px]">
+                  <option value="">학년 선택</option>
+                  <option value="">선택1</option>
+                  <option value="">선택2</option>
+                </select>
+              </div>
+              <div>
+                <input type="text" placeholder="학부모 휴대전화 번호" class="w-full h-12 px-3 border border-gray-d4 text-base rounded-sm outline-none bg-white" />
+              </div>
+              <div>
+                <input type="text" placeholder="학생 휴대전화 번호" class="w-full h-12 px-3 border border-gray-d4 text-base rounded-sm outline-none bg-white" />
+              </div>
+
+              <div class="bg-gray-f5/50 p-2 rounded-sm">
+                <label class="block group relative pl-8 mb-2">
+                  <input type="checkbox" class="peer opacity-0 invisible absolute" />
+                  <i class="absolute left-0 top-0 w-5.5 h-5.5 rounded-sm border border-gray-ac peer-checked:bg-light-navy peer-checked:bg-[url(/public/images/check.svg)] peer-checked:bg-size-[16px] peer-checked:bg-center peer-checked:bg-no-repeat"></i>
+                  <span class="block text-gray-666 text-base/5.5">개인정보 수집 및 활동 동의</span>
+                </label>
+                <div class="flex flex-col pl-8 text-sm">
+                  <span>목적 : 학원 강좌 및 설명회 외 정보 제공 등 서비스</span>
+                  <span>수집항목 : 이름, 휴대폰 번호, 학교, 학년, 계열</span>
+                  <span>보유기간 : 제출 시점부터 2년간 보유</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-navy btn-square">제출</button>
+            <button type="button" class="btn btn-square" data-modal-close>닫기</button>
+          </div>
+
+          <button type="button" data-modal-close class="modal-close">
+            <i class="block w-6 h-6 mask-[url('/public/images/x-mark.svg')] mask-no-repeat mask-center mask-cover bg-gray-333 transition duration-300 group-[.is-open]:rotate-180"></i>
+            <span class="sr-only">메뉴닫기</span>
+          </button>
+        </div>
+      </div>
+
+      <script src="/src/js/ui.js"></script>
     </div>
   </body>
 </html>

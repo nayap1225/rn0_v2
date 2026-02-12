@@ -1,0 +1,41 @@
+/**
+* Button CSS
+**/
+
+.btn {
+  display: inline-flex;
+  height: 42px;
+  gap: 2px;
+  padding: 5px 14px;
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #012750;
+  background-color: #f3f5f9;
+  border: 1px solid #012750;
+  border-radius: 30px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+
+  &.btn-square {
+    border-radius: 0;
+  }
+  &.btn-white {
+    color: #333;
+    border: 1px solid #d4d4d4;
+    background-color: #fff;
+  }
+  &.btn-navy {
+    color: #fff;
+    background-color: #012750;
+  }
+  &.btn-sm {
+    min-width: 88px;
+    height: 32px;
+    padding: 4px 10px;
+    font-size: 14px;
+  }
+}

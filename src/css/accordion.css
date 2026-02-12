@@ -1,0 +1,24 @@
+/**
+* Accordion CSS
+**/
+
+.accordion {
+  .accordion-body {
+    display: grid;
+    grid-template-columns: 0fr;
+    transition: grid-template-rows 0.3s linear;
+    overflow: hidden;
+    .is-open & {
+      grid-template-columns: 1fr;
+    }
+    .accordion-content {
+      overflow: hidden;
+      transform: translateY(-100%);
+      transition: transform 0.3s linear;
+      .is-open & {
+        padding: 20px 10px;
+        transform: translateY(0);
+      }
+    }
+  }
+}

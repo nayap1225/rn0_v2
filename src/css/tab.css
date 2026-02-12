@@ -2,7 +2,7 @@
 * Tab CSS
 **/
 
-.tab {
+.tab-wrap {
   .tab-link {
     display: grid;
     width: 100%;
@@ -17,17 +17,18 @@
         text-align: center;
       }
       button {
-        padding: 5px 10px;
+        padding: 10px;
         font-size: 24px;
         font-weight: 800;
-        color: rgb(0, 71, 171, 0.2);
+        color: rgb(1, 39, 80, 0.2);
         border-bottom: 3px solid transparent;
         white-space: nowrap;
-        .active & {
-          border-bottom-color: rgb(0, 71, 171, 1);
-          color: rgb(0, 71, 171, 1);
+        &.is-active {
+          border-bottom-color: #012750;
+          color: #012750;
         }
         @media (min-width: 800px) {
+          padding: 15px;
           font-size: 30px;
         }
         @media (min-width: 1280px) {
@@ -43,10 +44,10 @@
         padding: 15px 10px;
         font-size: 16px;
         font-weight: 600;
-        color: rgb(0, 71, 171);
+        color: #012750;
         white-space: nowrap;
-        .active & {
-          background: rgb(0, 71, 171);
+        &.is-active {
+          background: #012750;
           color: #fff;
         }
         @media (min-width: 800px) {
