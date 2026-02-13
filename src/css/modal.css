@@ -12,7 +12,7 @@
   opacity: 0;
   visibility: 0;
   z-index: -1;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease-in-out;
   &.is-open {
     opacity: 1;
     visibility: 1;
@@ -26,13 +26,6 @@
     max-height: 90dvh;
     max-width: 620px;
     background: #fff;
-    opacity: 0;
-    visibility: 0;
-    transition: all 0.3s ease;
-    &.is-open {
-      opacity: 1;
-      visibility: 1;
-    }
   }
   .modal-header {
     padding: 20px;

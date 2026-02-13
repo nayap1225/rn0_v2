@@ -50,6 +50,10 @@ function scrollUnlock() {
       const container = w.querySelector(":scope > .tab-container");
       const tabCont = container.querySelectorAll(":scope > .tab-content");
       tab.forEach((t, i) => {
+        if (t.classList.contains(ACTIVE_CLASS)) {
+          tabCont[i].style.display = "block";
+          sibllings(tabCont, tabCont[i]).forEach((s) => (s.style.display = "none"));
+        }
         t.addEventListener("click", (e) => {
           t.classList.add(ACTIVE_CLASS);
           const sibs = sibllings(tab, t);
@@ -81,28 +85,31 @@ function scrollUnlock() {
    * modal
    * ========================= */
   function modalHandler() {
-    const modal = document.querySelector(".modal");
+    // const modal = document.querySelector(".modal");
     const openModal = (id) => {
-      modal.classList.add(OPEN_CLASS);
-      const target = modal.querySelector(`[data-modal="${CSS.escape(id)}"]`);
+      // modal.classList.add(OPEN_CLASS);
+      const target = document.querySelector(`[data-modal="${CSS.escape(id)}"]`);
       target.classList.add(OPEN_CLASS);
       scrollLock();
     };
-    const closeModal = () => {
-      modal.classList.remove(OPEN_CLASS);
+    const closeModal = (id) => {
+      const target = document.querySelector(`[data-modal="${CSS.escape(id)}"]`);
+      target.classList.remove(OPEN_CLASS);
       scrollUnlock();
     };
     document.addEventListener("click", (e) => {
       const openBtn = e.target.dataset.modalOpen || e.target.closest("[data-modal-open]");
       if (openBtn) {
         e.preventDefault();
-        openModal(openBtn);
+        const id = typeof openBtn === "string" ? openBtn : openBtn.dataset.modalOpen;
+        openModal(id);
         return;
       }
       const closeBtn = e.target.dataset.modalClose || e.target.closest("[data-modal-close]");
       if (closeBtn) {
         e.preventDefault();
-        closeModal();
+        const id = closeBtn.closest("[data-modal]").dataset.modal;
+        closeModal(id);
         return;
       }
     });

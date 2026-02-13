@@ -55,5 +55,39 @@
         }
       }
     }
+    &.tab-link--sm {
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+      li {
+        border-bottom: 2px solid #012750;
+        &:has(.is-active) {
+          border-bottom-color: #fff;
+        }
+        &:not(:first-child):has(.is-active) {
+          border-left: 2px solid #012750;
+        }
+        &:not(:last-child):has(.is-active) {
+          border-right: 2px solid #012750;
+        }
+      }
+      button {
+        width: 100%;
+        background: #f3f5f9;
+        padding: 12px 8px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #012750;
+        white-space: nowrap;
+        &.is-active {
+          background: #fff;
+          color: #000;
+        }
+        @media (min-width: 800px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .tab-content {
+    display: none;
   }
 }

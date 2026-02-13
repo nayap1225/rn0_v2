@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/globals.css" />
+    <title>알과영과학학원</title>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <!-- S :: header -->
+      <header class="sticky top-0 py-3.8 bg-white/75 backdrop-blur-[2.5px] tb:py-7.5 z-20 shadow-md">
+        <div class="container-inner">
+          <div class="flex justify-between items-center gap-4">
+            <h1>
+              <a href="/" class="flex items-center gap-2.5">
+                <i class="hidden tb:block w-10 h-10 bg-[url('/public/images/logo-icon.svg')] bg-no-repeat bg-center bg-cover"></i>
+                <strong class="w-52 tb:w-50"><img src="/public/images/logo.svg" alt="알과영과학학원" /></strong>
+              </a>
+            </h1>
+
+            <nav class="hidden tb:flex w-full items-center text-base font-semibold gap-1 justify-evenly tb:gap-8 tb:justify-end dt:gap-12">
+              <a href="/" class="flex items-center justify-center p-1 text-base">선생님 소개</a>
+              <a href="/" class="flex items-center justify-center p-1 text-base">설명회 신청</a>
+              <a href="/" class="flex items-center justify-center p-1 text-base tb:px-5.5 tb:py-2 tb:rounded-4xl tb:bg-black tb:text-white">문자 수신 신청</a>
+            </nav>
+
+            <!-- 사이드메뉴 열기 -->
+            <button type="button" class="flex flex-col gap-1.5 p-1.5" onClick="menuControlHandler('open')">
+              <span class="w-8 h-0.75 bg-blue-0047 rounded-2xl"></span>
+              <span class="w-8 h-0.75 bg-blue-0047 rounded-2xl"></span>
+              <span class="w-8 h-0.75 bg-blue-0047 rounded-2xl"></span>
+              <span class="sr-only">메뉴열기</span>
+            </button>
+            <!-- // 사이드메뉴 열기 -->
+          </div>
+        </div>
+      </header>
+      <!-- E :: header -->
+
+      <!-- 사이드메뉴 -->
+      <aside>
+        <div class="side-menu">
+          <div class="flex-1 flex flex-col overflow-hidden pb-8">
+            <div class="flex flex-none justify-between items-center p-4 border-b border-black/10">
+              <strong class="block w-38"><img src="/public/images/logo.svg" alt="알과영과학학원" class="w-full" /></strong>
+              <!-- 메뉴닫기 버튼 -->
+              <button type="button" class="flex flex-col gap-1.5 p-1.5 relative w-8 h-8" onClick="menuControlHandler('close')">
+                <span class="w-6 h-0.75 bg-blue-0047 rounded-2xl absolute top-[calc(50%-1.5px)] rotate-45"></span>
+                <span class="w-6 h-0.75 bg-blue-0047 rounded-2xl absolute top-[calc(50%-1.5px)] rotate-135"></span>
+                <span class="sr-only">메뉴닫기</span>
+              </button>
+              <!-- // 메뉴닫기 버튼 -->
+            </div>
+
+            <div class="flex flex-col flex-1 overflow-auto gap-8">
+              <div class="flex-1">
+                <ul class="flex flex-col w-full p-4 gap-1">
+                  <li class="hover:bg-blue-0047 hover:text-white transition-all duration-200 rounded-lg"><a href="/" class="block p-4 font-mdeium">메뉴1</a></li>
+                  <li class="hover:bg-blue-0047 hover:text-white transition-all duration-200 rounded-lg"><a href="/" class="block p-4 font-mdeium">메뉴2</a></li>
+                  <li class="hover:bg-blue-0047 hover:text-white transition-all duration-200 rounded-lg"><a href="/" class="block p-4 font-mdeium">메뉴3</a></li>
+                  <li class="hover:bg-blue-0047 hover:text-white transition-all duration-200 rounded-lg"><a href="/" class="block p-4 font-mdeium">메뉴4</a></li>
+                  <li class="hover:bg-blue-0047 hover:text-white transition-all duration-200 rounded-lg"><a href="/" class="block p-4 font-mdeium">메뉴5</a></li>
+                </ul>
+              </div>
+              <div class="flex-none">
+                <ul class="flex flex-col w-full p-4 gap-1">
+                  <li class="border-b border-gray-666/10"><a href="/" class="block px-4 py-2 text-sm">util1</a></li>
+                  <li class="border-b border-gray-666/10"><a href="/" class="block px-4 py-2 text-sm">util2</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // 사이드메뉴 -->
+        <!-- dimmed -->
+        <div class="dimmed" onClick="menuControlHandler('close')"></div>
+        <!-- // dimmed -->
+      </aside>
+
+      <!-- S :: container -->
+      <main class="container-wrap pb-12 tb:pb-16 dt:pb-20">
+        <section class="flex items-center justify-between bg-[url(/public/images/temp/teacher_visual.jpg)] bg-no-repeat bg-center bg-cover h-48 dt:h-56">
+          <div class="container-inner flex-1 text-center">
+            <strong class="block text-white font-semibold text-3xl/10 dt:text-4xl/12 break-keep">
+              과학전문가집단,
+              <br />
+              알과영입니다.
+            </strong>
+            <small class="block mt-2 text-white text-lg font-medium break-keep">최고의 강사진 ! 과학전문가집단 ! 알과영과 함께하세요</small>
+          </div>
+        </section>
+
+        <section class="mt-10 tb:mt-15">
+          <div class="container-inner">
+            <!-- title 영역 -->
+            <div class="flex flex-col gap-4 mb-6 tb:flex-row tb:justify-between tb:items-center tb:mb-8">
+              <h2 class="text-3xl/9 font-medium">송파관</h2>
+            </div>
+            <!-- // title 영역 -->
+
+            <div class="tab-wrap">
+              <ul class="tab-link tab-link--base">
+                <li><button type="button" class="tab is-active">물리</button></li>
+                <li><button type="button" class="tab">화학</button></li>
+                <li><button type="button" class="tab">생명과학</button></li>
+                <li><button type="button" class="tab">지구과학</button></li>
+                <li><button type="button" class="tab">중등과학</button></li>
+              </ul>
+              <div class="tab-container">
+                <!-- tab inner -->
+                <div class="tab-content mt-5">
+                  <ul class="grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-4 tb:grid-cols-[repeat(auto-fill,minmax(180px,1fr))] tb:gap-8">
+                    <li class="rounded-xl">
+                      <button type="button" class="w-full" data-modal-open="modal-classList">
+                        <figure class="w-full aspect-9/11">
+                          <span class="block rounded-xl bg-gray-f5 overflow-hidden"><img src="https://placehold.co/200x260/png" alt="" class="w-full h-full object-cover" /></span>
+                          <figcaption class="mt-4 text-center">
+                            <small class="block text-blue-0047 font-bold text-base">물리</small>
+                            <strong class="block font-medium text-xl">김이영 선생님</strong>
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                    <li class="rounded-xl">
+                      <button type="button" class="w-full" data-modal-open="modal-classList">
+                        <figure class="w-full aspect-9/11">
+                          <span class="block rounded-xl bg-gray-f5 overflow-hidden"><img src="https://placehold.co/200x260/png" alt="" class="w-full h-full object-cover" /></span>
+                          <figcaption class="mt-4 text-center">
+                            <small class="block text-blue-0047 font-bold text-base">물리</small>
+                            <strong class="block font-medium text-xl">김이영 선생님</strong>
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                    <li class="rounded-xl">
+                      <button type="button" class="w-full" data-modal-open="modal-classList">
+                        <figure class="w-full aspect-9/11">
+                          <span class="block rounded-xl bg-gray-f5 overflow-hidden"><img src="https://placehold.co/200x260/png" alt="" class="w-full h-full object-cover" /></span>
+                          <figcaption class="mt-4 text-center">
+                            <small class="block text-blue-0047 font-bold text-base">물리</small>
+                            <strong class="block font-medium text-xl">김이영 선생님</strong>
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                    <li class="rounded-xl">
+                      <button type="button" class="w-full" data-modal-open="modal-classList">
+                        <figure class="w-full aspect-9/11">
+                          <span class="block rounded-xl bg-gray-f5 overflow-hidden"><img src="https://placehold.co/200x260/png" alt="" class="w-full h-full object-cover" /></span>
+                          <figcaption class="mt-4 text-center">
+                            <small class="block text-blue-0047 font-bold text-base">물리</small>
+                            <strong class="block font-medium text-xl">김이영 선생님</strong>
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                    <li class="rounded-xl">
+                      <button type="button" class="w-full" data-modal-open="modal-classList">
+                        <figure class="w-full aspect-9/11">
+                          <span class="block rounded-xl bg-gray-f5 overflow-hidden"><img src="https://placehold.co/200x260/png" alt="" class="w-full h-full object-cover" /></span>
+                          <figcaption class="mt-4 text-center">
+                            <small class="block text-blue-0047 font-bold text-base">물리</small>
+                            <strong class="block font-medium text-xl">김이영 선생님</strong>
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                    <li class="rounded-xl">
+                      <button type="button" class="w-full" data-modal-open="modal-classList">
+                        <figure class="w-full aspect-9/11">
+                          <span class="block rounded-xl bg-gray-f5 overflow-hidden"><img src="https://placehold.co/200x260/png" alt="" class="w-full h-full object-cover" /></span>
+                          <figcaption class="mt-4 text-center">
+                            <small class="block text-blue-0047 font-bold text-base">물리</small>
+                            <strong class="block font-medium text-xl">김이영 선생님</strong>
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-10 tb:mt-15">
+          <div class="container-inner">
+            <!-- title 영역 -->
+            <div class="flex flex-col gap-4 mb-6 tb:flex-row tb:justify-between tb:items-center tb:mb-8">
+              <h2 class="text-3xl/9 font-medium">강동관</h2>
+            </div>
+            <!-- // title 영역 -->
+
+            <div class="tab-wrap">
+              <ul class="tab-link tab-link--base">
+                <li><button type="button" class="tab is-active">물리</button></li>
+                <li><button type="button" class="tab">화학</button></li>
+                <li><button type="button" class="tab">생명과학</button></li>
+                <li><button type="button" class="tab">지구과학</button></li>
+                <li><button type="button" class="tab">중등과학</button></li>
+              </ul>
+              <div class="tab-container">
+                <!-- tab inner -->
+                <div class="tab-content mt-5">
+                  <ul class="grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-4 tb:grid-cols-[repeat(auto-fill,minmax(180px,1fr))] tb:gap-8">
+                    <li class="rounded-xl">
+                      <button type="button" class="w-full" data-modal-open="modal-classList">
+                        <figure class="w-full aspect-9/11">
+                          <span class="block rounded-xl bg-gray-f5 overflow-hidden"><img src="https://placehold.co/200x260/png" alt="" class="w-full h-full object-cover" /></span>
+                          <figcaption class="mt-4 text-center">
+                            <small class="block text-blue-0047 font-bold text-base">물리</small>
+                            <strong class="block font-medium text-xl">김이영 선생님</strong>
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                    <li class="rounded-xl">
+                      <button type="button" class="w-full" data-modal-open="modal-classList">
+                        <figure class="w-full aspect-9/11">
+                          <span class="block rounded-xl bg-gray-f5 overflow-hidden"><img src="https://placehold.co/200x260/png" alt="" class="w-full h-full object-cover" /></span>
+                          <figcaption class="mt-4 text-center">
+                            <small class="block text-blue-0047 font-bold text-base">물리</small>
+                            <strong class="block font-medium text-xl">김이영 선생님</strong>
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                    <li class="rounded-xl">
+                      <button type="button" class="w-full" data-modal-open="modal-classList">
+                        <figure class="w-full aspect-9/11">
+                          <span class="block rounded-xl bg-gray-f5 overflow-hidden"><img src="https://placehold.co/200x260/png" alt="" class="w-full h-full object-cover" /></span>
+                          <figcaption class="mt-4 text-center">
+                            <small class="block text-blue-0047 font-bold text-base">물리</small>
+                            <strong class="block font-medium text-xl">김이영 선생님</strong>
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                    <li class="rounded-xl">
+                      <button type="button" class="w-full" data-modal-open="modal-classList">
+                        <figure class="w-full aspect-9/11">
+                          <span class="block rounded-xl bg-gray-f5 overflow-hidden"><img src="https://placehold.co/200x260/png" alt="" class="w-full h-full object-cover" /></span>
+                          <figcaption class="mt-4 text-center">
+                            <small class="block text-blue-0047 font-bold text-base">물리</small>
+                            <strong class="block font-medium text-xl">김이영 선생님</strong>
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                    <li class="rounded-xl">
+                      <button type="button" class="w-full" data-modal-open="modal-classList">
+                        <figure class="w-full aspect-9/11">
+                          <span class="block rounded-xl bg-gray-f5 overflow-hidden"><img src="https://placehold.co/200x260/png" alt="" class="w-full h-full object-cover" /></span>
+                          <figcaption class="mt-4 text-center">
+                            <small class="block text-blue-0047 font-bold text-base">물리</small>
+                            <strong class="block font-medium text-xl">김이영 선생님</strong>
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                    <li class="rounded-xl">
+                      <button type="button" class="w-full" data-modal-open="modal-classList">
+                        <figure class="w-full aspect-9/11">
+                          <span class="block rounded-xl bg-gray-f5 overflow-hidden"><img src="https://placehold.co/200x260/png" alt="" class="w-full h-full object-cover" /></span>
+                          <figcaption class="mt-4 text-center">
+                            <small class="block text-blue-0047 font-bold text-base">물리</small>
+                            <strong class="block font-medium text-xl">김이영 선생님</strong>
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-10 tb:mt-15">
+          <div class="container-inner">
+            <!-- title 영역 -->
+            <div class="flex flex-col gap-4 mb-6 tb:flex-row tb:justify-between tb:items-center tb:mb-8">
+              <h2 class="text-3xl/9 font-medium">위례관</h2>
+            </div>
+            <!-- // title 영역 -->
+
+            <div class="tab-wrap">
+              <ul class="tab-link tab-link--base">
+                <li><button type="button" class="tab is-active">물리</button></li>
+                <li><button type="button" class="tab">화학</button></li>
+                <li><button type="button" class="tab">생명과학</button></li>
+                <li><button type="button" class="tab">지구과학</button></li>
+                <li><button type="button" class="tab">중등과학</button></li>
+              </ul>
+              <div class="tab-container">
+                <!-- tab inner -->
+                <div class="tab-content mt-5">
+                  <ul class="grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-4 tb:grid-cols-[repeat(auto-fill,minmax(180px,1fr))] tb:gap-8">
+                    <li class="rounded-xl">
+                      <button type="button" class="w-full" data-modal-open="modal-classList">
+                        <figure class="w-full aspect-9/11">
+                          <span class="block rounded-xl bg-gray-f5 overflow-hidden"><img src="https://placehold.co/200x260/png" alt="" class="w-full h-full object-cover" /></span>
+                          <figcaption class="mt-4 text-center">
+                            <small class="block text-blue-0047 font-bold text-base">물리</small>
+                            <strong class="block font-medium text-xl">김이영 선생님</strong>
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- E :: container -->
+
+      <!-- S :: footer -->
+      <footer class="py-7.5 bg-blue-0047 text-white">
+        <div class="container-inner">
+          <!-- 학원지점정보 -->
+          <div class="flex gap-5 tb:justify-between">
+            <i class="w-22.5 h-22.5 mask-[url(/public/images/logo-icon.svg)] bg-white mask-no-repeat mask-cover flex-none"></i>
+            <div class="flex flex-col flex-1 gap-15 tb:flex-row tb:justify-end tb:gap-4 dt:gap-19.5">
+              <dl class="flex flex-col flex-1 text-xl/6 dt:flex-[0_0_240px]">
+                <dt class="mb-7.5">송파관</dt>
+                <dd class="flex-1 flex flex-col">
+                  <p class="pb-10 break-keep tb:flex-1 dt:pb-16">
+                    서울 송파구 양재대로71길
+                    <br />
+                    1-14 5층, 6층
+                  </p>
+                  <p class="flex flex-wrap gap-1 dt:text-base/5">
+                    <span>사업자등록번호 :</span>
+                    <span>752-86-02592</span>
+                  </p>
+                  <p class="flex flex-wrap gap-1 dt:text-base/5">
+                    <span>학원설립운영등록번호 :</span>
+                    <span>제8013호</span>
+                  </p>
+                </dd>
+              </dl>
+
+              <dl class="flex flex-col flex-1 text-xl/6 dt:flex-[0_0_240px]">
+                <dt class="mb-7.5">강동관</dt>
+                <dd class="flex-1 flex flex-col">
+                  <p class="pb-10 break-keep tb:flex-1 dt:pb-16">
+                    서울 송파구 위례성대로
+                    <br />
+                    18길 31-9 2층
+                  </p>
+                  <p class="flex flex-wrap gap-1 dt:text-base/5">
+                    <span>사업자등록번호 :</span>
+                    <span>210-85-30340</span>
+                  </p>
+                  <p class="flex flex-wrap gap-1 dt:text-base/5">
+                    <span>학원설립운영등록번호 :</span>
+                    <span>제8009호</span>
+                  </p>
+                </dd>
+              </dl>
+
+              <dl class="flex flex-col flex-1 text-xl/6 dt:flex-[0_0_240px]">
+                <dt class="mb-7.5">위례관</dt>
+                <dd class="flex-1 flex flex-col">
+                  <p class="pb-10 break-keep tb:flex-1 dt:pb-16">
+                    서울 강동구 고덕로 266
+                    <br />
+                    2층 212호~216호,
+                    <br />
+                    3층 313호~314호
+                  </p>
+                  <p class="flex flex-wrap gap-1 dt:text-base/5">
+                    <span>사업자등록번호 :</span>
+                    <span>586-81-02480</span>
+                  </p>
+                  <p class="flex flex-wrap gap-1 dt:text-base/5">
+                    <span>학원설립운영등록번호 :</span>
+                    <span>제7936호</span>
+                  </p>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <!-- // 학원지점정보 -->
+
+          <div class="flex flex-wrap mt-40 text-center gap-x-10 gap-y-2 justify-center tb:justify-end">
+            <p class="w-full text-base font-bold tb:w-auto">© 2026 알과영과학학원. All Rights Reserved.</p>
+            <a href="" class="text-base font-bold">이용약관</a>
+            <a href="" class="text-base font-bold">개인정보처리방침</a>
+          </div>
+        </div>
+      </footer>
+      <!-- E :: footer -->
+
+      <!-- 진행중인강의 팝업 -->
+      <div class="modal" data-modal="modal-classList">
+        <div class="modal-dim" data-modal-close></div>
+        <div class="modal-panel">
+          <div class="modal-header">
+            <h2 class="modal-title">진행중인 강의</h2>
+          </div>
+
+          <div class="modal-body">
+            <ul>
+              <li class="flex items-center justify-between gap-2 border-b border-gray-d4 py-4">
+                <div class="flex flex-col flex-1 gap-1.5">
+                  <div class="flex gap-0.5">
+                    <i class="px-1.5 py-0.5 bg-navy text-white text-xs rounded-sm not-italic font-semibold flex-none">고3</i>
+                    <i class="px-1.5 py-0.5 bg-navy text-white text-xs rounded-sm not-italic font-semibold flex-none">정규</i>
+                    <i class="px-1.5 py-0.5 bg-navy text-white text-xs rounded-sm not-italic font-semibold flex-none">국어</i>
+                  </div>
+                  <div class="flex gap-2 mb-2">
+                    <i class="inline-flex px-1.5 py-1 bg-blue-500 text-white text-xs rounded-sm not-italic font-semibold flex-none self-start">모집중</i>
+                    <strong class="flex-1 inline-flex font-semibold text-base/6">2027 수능 국어</strong>
+                  </div>
+                  <div class="flex flex-wrap gap-x-4 gap-y-2 text-666">
+                    <span class="font-bold">강지연 선생님</span>
+                    <span>
+                      강의시간 :
+                      <em class="not-italic font-medium text-black">일 A9:00-12:30</em>
+                    </span>
+                    <span class="">
+                      개강일 :
+                      <em class="not-italic font-medium text-black">12/28</em>
+                    </span>
+                  </div>
+                </div>
+                <button type="button" class="flex-none btn btn-navy btn-sm" data-modal-open="req-modal">수강예약</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-navy btn-square">수강예약하기</button>
+          </div>
+
+          <button type="button" data-modal-close class="modal-close">
+            <i class="block w-6 h-6 mask-[url('/public/images/x-mark.svg')] mask-no-repeat mask-center mask-cover bg-gray-333 transition duration-300 group-[.is-open]:rotate-180"></i>
+            <span class="sr-only">팝업닫기</span>
+          </button>
+        </div>
+      </div>
+      <!-- // 진행중인강의 팝업 -->
+
+      <!-- 수강예약팝업 -->
+      <div class="modal" data-modal="req-modal">
+        <div class="modal-dim" data-modal-close></div>
+        <div class="modal-panel">
+          <div class="modal-header">
+            <h2 class="modal-title">수강 예약</h2>
+          </div>
+
+          <div class="modal-body">
+            <p class="font-semibold text-lg mb-4">
+              강의 시간
+              <em class="not-italic text-red-500 font-bold">목 P6:00-9:00</em>
+              개강일
+              <em class="not-italic text-red-500 font-bold">1/1</em>
+              <strong class="block font-semibold mb-1">문학 문법 프리미엄 개념 문풀 특강</strong>
+              <small class="block text-gray-ac">국어/권미나</small>
+            </p>
+
+            <div class="flex flex-col gap-5">
+              <div>
+                <input type="text" placeholder="학생 이름" class="w-full h-12 px-3 border border-gray-d4 text-base rounded-sm outline-none bg-white" />
+              </div>
+              <div>
+                <input type="text" placeholder="학교" class="w-full h-12 px-3 border border-gray-d4 text-base rounded-sm outline-none bg-white" />
+              </div>
+              <div>
+                <select name="" id="" class="w-full h-12 px-3 pr-10 border border-gray-d4 text-base rounded-sm outline-none appearance-none bg-white bg-[url(/public/images/chevron-down.svg)] bg-no-repeat bg-position-[right_10px_center] bg-size-[20px]">
+                  <option value="">계열 선택</option>
+                  <option value="">선택1</option>
+                  <option value="">선택2</option>
+                </select>
+              </div>
+              <div>
+                <select name="" id="" class="w-full h-12 px-3 pr-10 border border-gray-d4 text-base rounded-sm outline-none appearance-none bg-white bg-[url(/public/images/chevron-down.svg)] bg-no-repeat bg-position-[right_10px_center] bg-size-[20px]">
+                  <option value="">학년 선택</option>
+                  <option value="">선택1</option>
+                  <option value="">선택2</option>
+                </select>
+              </div>
+              <div>
+                <input type="text" placeholder="학부모 휴대전화 번호" class="w-full h-12 px-3 border border-gray-d4 text-base rounded-sm outline-none bg-white" />
+              </div>
+              <div>
+                <input type="text" placeholder="학생 휴대전화 번호" class="w-full h-12 px-3 border border-gray-d4 text-base rounded-sm outline-none bg-white" />
+              </div>
+
+              <div class="bg-gray-f5/50 p-2 rounded-sm">
+                <label class="block group relative pl-8 mb-2">
+                  <input type="checkbox" class="peer opacity-0 invisible absolute" />
+                  <i class="absolute left-0 top-0 w-5.5 h-5.5 rounded-sm border border-gray-ac peer-checked:bg-light-navy peer-checked:bg-[url(/public/images/check.svg)] peer-checked:bg-size-[16px] peer-checked:bg-center peer-checked:bg-no-repeat"></i>
+                  <span class="block text-gray-666 text-base/5.5">개인정보 수집 및 활동 동의</span>
+                </label>
+                <div class="flex flex-col pl-8 text-sm">
+                  <span>목적 : 학원 강좌 및 설명회 외 정보 제공 등 서비스</span>
+                  <span>수집항목 : 이름, 휴대폰 번호, 학교, 학년, 계열</span>
+                  <span>보유기간 : 제출 시점부터 2년간 보유</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-navy btn-square">제출</button>
+            <button type="button" class="btn btn-square" data-modal-close>닫기</button>
+          </div>
+
+          <button type="button" data-modal-close class="modal-close">
+            <i class="block w-6 h-6 mask-[url('/public/images/x-mark.svg')] mask-no-repeat mask-center mask-cover bg-gray-333 transition duration-300 group-[.is-open]:rotate-180"></i>
+            <span class="sr-only">팝업닫기</span>
+          </button>
+        </div>
+      </div>
+      <!-- // 수강예약팝업 -->
+
+      <script src="/src/js/ui.js"></script>
+    </div>
+  </body>
+</html>
